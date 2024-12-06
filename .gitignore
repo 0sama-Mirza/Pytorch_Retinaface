@@ -2,3 +2,5 @@ data/FDDB/images/
 data/FDDB/img_list.txt
 data/widerface/
 widerface_evaluate/widerface_txt/
+results/
+weights/
