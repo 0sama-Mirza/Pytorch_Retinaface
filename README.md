@@ -1,3 +1,32 @@
+# Things I Changed:
+## How to detect faces in an image?
+After training the model you will have a .pth weight file. Use the following command to test it on an image:
+```
+python detect.py --trained_model weights/Resnet50_Final.pth --network resnet50 --save_image
+```
+Just change the argument to where you have saved your .pth file. 
+### How to detect images in a folder?
+Simply run retinaface_worker.py by:
+```
+python retinaface_worker.py
+```
+To tell it where the folder is simply go to retinaface_worker.py and change the following arguments:
+```
+all_detections = detect_faces(
+  trained_model_path="weights/Resnet50_Final.pth",
+  input_folder="./data/New-Images",
+  output_folder="./data/New-Results",
+  confidence_threshold=0.02,
+  use_cpu=False,
+  save_image=True
+)
+```
+## Other things:
+Other that I changed are not that important. Its just making it compatable with my system:
++ 'batch_size': 24 -> 'batch_size': 8
++ Enable mixed precision
+
+---
 # RetinaFace in PyTorch
 
 A [PyTorch](https://pytorch.org/) implementation of [RetinaFace: Single-stage Dense Face Localisation in the Wild](https://arxiv.org/abs/1905.00641). Model size only 1.7M, when Retinaface use mobilenet0.25 as backbone net. We also provide resnet50 as backbone net to get better result. The official code in Mxnet can be found [here](https://github.com/deepinsight/insightface/tree/master/RetinaFace).

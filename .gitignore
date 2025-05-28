@@ -1,6 +1,12 @@
 data/FDDB/images/
 data/FDDB/img_list.txt
 data/widerface/
+data/New-Images
+data/Testing-Images
+data/New-Results
+data/results
 widerface_evaluate/widerface_txt/
 results/
 weights/
+__pycache__
+**/__pycache__/
