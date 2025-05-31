@@ -6,9 +6,9 @@ python detect.py --trained_model weights/Resnet50_Final.pth --network resnet50 -
 ```
 Just change the argument to where you have saved your .pth file. 
 ### How to detect images in a folder?
-Simply run retinaface_worker.py by:
+Simply run retinaface_pytorch_worker.py by:
 ```
-python retinaface_worker.py
+python retinaface_pytorch_worker.py
 ```
 To tell it where the folder is simply go to retinaface_worker.py and change the following arguments:
 ```
