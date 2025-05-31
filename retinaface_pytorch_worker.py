@@ -10,5 +10,5 @@ if __name__ == "__main__":
         use_cpu=False,
         save_image=True
     )
-    
+    print(all_detections)
     print_detection_summary(all_detections)
